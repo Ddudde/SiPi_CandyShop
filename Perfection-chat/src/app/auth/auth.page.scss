@@ -1,0 +1,63 @@
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    .team715-text{
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .team715-icon {
+        font-size: 44px;
+    }
+}
+
+.subtitle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px 16px;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+form {
+    max-width: 450px;
+    margin: auto;
+    ion-card {
+        box-shadow: none;
+        border: 1px solid #e1e1e1;
+        padding: 24px;
+        .terms-and-conditions{
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+            ion-text {
+                font-weight: 500;
+            }
+        }
+        ion-button {
+            margin-top: 20px;
+            height: 50px;
+        }
+    }
+}
+
+.toggle-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-text {
+        font-weight: 500;
+        cursor: pointer;
+        margin-left: 8px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+}

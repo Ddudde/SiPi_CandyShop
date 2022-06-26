@@ -1,0 +1,130 @@
+<ion-content>
+  <div class="title-container">
+    <ion-text class="team715-text">715Team</ion-text>
+    <ion-icon
+      class="team715-icon"
+      name="logo-foursquare"
+      color="danger"
+    ></ion-icon>
+  </div>
+  <div class="subtitle-container">Сделаем будущее вместе!</div>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+      <ng-container *ngIf="submissionType === 'join'">
+        <ion-item>
+          <ion-label position="floating">Фамилия</ion-label>
+          <ion-input
+            #firstNameInput="ngModel"
+            ngModel
+            type="text"
+            name="firstName"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-text
+          style="font-style: italic"
+          color="danger"
+          *ngIf="!firstNameInput.valid && firstNameInput.touched"
+          >Пожалуйста, введите вашу фамилию</ion-text
+        >
+      </ng-container>
+
+      <ng-container *ngIf="submissionType === 'join'">
+        <ion-item>
+          <ion-label position="floating">Имя</ion-label>
+          <ion-input
+            #lastNameInput="ngModel"
+            ngModel
+            type="text"
+            name="lastName"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-text
+          style="font-style: italic"
+          color="danger"
+          *ngIf="!lastNameInput.valid && lastNameInput.touched"
+          >Пожалуйста, введите ваше имя</ion-text
+        >
+      </ng-container>
+
+      <ng-container *ngIf="submissionType === 'join'">
+        <ion-item>
+          <ion-label position="floating">Отчество</ion-label>
+          <ion-input
+            #middleNameInput="ngModel"
+            ngModel
+            type="email"
+            name="middleName"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-text
+          style="font-style: italic"
+          color="danger"
+          *ngIf="!middleNameInput.valid && middleNameInput.touched"
+          >Пожалуйста, введите ваше отчество</ion-text
+        >
+      </ng-container>
+      <ion-item>
+        <ion-label position="floating">Почта</ion-label>
+        <ion-input
+          #emailInput="ngModel"
+          ngModel
+          type="text"
+          name="email"
+          required
+        ></ion-input>
+      </ion-item>
+      <ion-text
+        style="font-style: italic"
+        color="danger"
+        *ngIf="!emailInput.valid && emailInput.touched"
+        >Пожалуйста, введите вашу почту</ion-text
+      >
+
+      <ion-item>
+        <ion-label position="floating">Пароль</ion-label>
+        <ion-input
+          #passwordInput="ngModel"
+          ngModel
+          type="password"
+          name="password"
+          required
+        ></ion-input>
+      </ion-item>
+      <ion-text
+        style="font-style: italic"
+        color="danger"
+        *ngIf="!passwordInput.valid && passwordInput.touched"
+        >Пожалуйста, введите ваш пароль</ion-text
+      >
+      <p *ngIf="submissionType === 'join'" class="terms-and-conditions">
+        Нажимая "Подтверждаю & Присоединиться", вы подтверждаете, что
+        соглашаетесь с правилами 715Team о:
+        <ion-text color="tertiary">Пользовательском соглашение</ion-text>,
+        <ion-text color="tertiary">Политики конфиденциальности</ion-text>, и
+        <ion-text color="tertiary"
+          >Политики о неразоглашении коммерческих соглашений компании</ion-text
+        >
+      </p>
+      <ion-button
+        [disabled]="!form.valid"
+        type="submit"
+        shape="round"
+        expand="block"
+      >
+        {{ submissionType === 'login' ? 'Войти' : 'Присоединиться сейчас'
+        }}</ion-button
+      >
+    </ion-card>
+  </form>
+  <div class="toggle-text">
+    {{ submissionType === 'login' ? 'Новый пользователь компании?' : 'Уже в
+    команде 715Team?' }}
+    <ion-text class="toggle-auth-mode" (click)="toggleText()" color="primary">
+      {{ submissionType === 'login' ? 'Присоединиться сейчас' : 'Войти' }}
+    </ion-text>
+  </div>
+</ion-content>

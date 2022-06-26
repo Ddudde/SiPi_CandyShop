@@ -1,0 +1,52 @@
+.heading {
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading icon-button {
+  padding: 0;
+}
+
+ion-grid ion-button {
+  --border-width: 1px;
+  height: 35px;
+  width: 100px;
+}
+
+ion-grid ion-button .view-status {
+  margin: 0 6px;
+  font-style: italic;
+}
+
+ion-grid ion-button .ion-margin {
+  margin-top: 0px;
+}
+
+.action-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ion-icon {
+  margin: auto;
+}
+
+.ion-margin {
+  width: 110px;
+}
+/*# sourceMappingURL=modal.component.css.map */

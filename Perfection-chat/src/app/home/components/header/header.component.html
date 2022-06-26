@@ -1,0 +1,96 @@
+<ion-header class="ion-container ion-no-border">
+  <ion-toolbar>
+    <div class="toolbar-wrapper">
+      <ion-buttons slot="start" class="ion-no-padding">
+        <ion-button style="cursor: pointer" [routerLink]="['/home']">
+            <ion-icon      
+              class="chat-logo"   
+              name="logo-wechat"
+              ></ion-icon>
+            </ion-button>
+            <ion-searchbar class="ion-hide-lg-down" placeholder="Поиск">
+            </ion-searchbar>
+      </ion-buttons>
+
+        <ion-grid>
+          <ion-row class="ion-justify-content-end">
+            <ion-col
+            style="cursor: pointer"
+            [routerLink]="['/home']"
+            class="ion-hide-md-down"
+            size="auto"
+          >
+                  <ion-icon name="home"></ion-icon>
+                    <div>Главная</div>
+              </ion-col>
+              <ion-col
+              style="cursor: pointer"
+              [routerLink]="['/home/chat/connections']"
+              class="ion-hide-md-down"
+              size="auto"
+            >
+                <ion-icon name="chatbox-ellipses"></ion-icon>
+                      <div>Сообщения</div>
+                    </ion-col>
+              <ion-col class="ion-hide-md-down" size="auto">
+                <ion-icon name="notifications"></ion-icon>
+                  <ion-badge 
+                      color="danger"
+                      style="position: absolute;
+                      margin-left: -10px;
+                      margin-top: -5px;
+                      height: 16px;
+                      width: 16px;
+                      border-radius: 9999px">
+                      2
+                  </ion-badge>
+                  <div>Оповещения</div>
+              </ion-col>
+              <ion-col
+              (click)="
+                this.connectionProfileService.friendRequests?.length > 0 &&
+                  presentFriendRequestPopover($event)
+              "
+              class="ion-hide-md-down"
+              size="auto">
+              <ion-icon name="people"></ion-icon>
+              <ion-badge
+              color="danger"
+              style="
+                position: absolute;
+                margin-left: -5px;
+                margin-top: -5px;
+                height: 16px;
+                width: 16px;
+                border-radius: 9999px;
+              "
+            >
+              {{ this.connectionProfileService.friendRequests?.length || 0 }}
+            </ion-badge>
+                    <div>Коллеги</div>
+              </ion-col>
+              <ion-col
+              style="cursor: pointer"
+              class="popover-menu"
+              (click)="presentPopover($event)"
+              size="auto"
+            >
+                  <ion-avatar>
+                    <ion-img src="../../../../assets/avatar_me.jpg"></ion-img>
+                  </ion-avatar>
+                  <div style="
+                  display: flex; 
+                  justify-content: flex-end; 
+                  align-items: flex-end">
+                    Мой профиль
+                    <ion-icon
+                      style="font-size: 16px"
+                      name="caret-down-outline"
+                      ></ion-icon>
+                  </div>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
+  </ion-toolbar>
+</ion-header>

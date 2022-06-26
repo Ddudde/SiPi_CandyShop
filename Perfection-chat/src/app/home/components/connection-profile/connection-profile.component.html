@@ -1,0 +1,69 @@
+<ion-content>
+  <ion-card>
+    <div
+      [style.background]="this.bannerColorService.bannerColors.colorTwo"
+      class="backdrop"
+    >
+      <div
+        [style.background]="this.bannerColorService.bannerColors.colorOne"
+        class="background-one"
+      ></div>
+      <div
+        [style.background]="this.bannerColorService.bannerColors.colorOne"
+        class="half-ellipse"
+      ></div>
+      <div
+        [style.background]="this.bannerColorService.bannerColors.colorTwo"
+        class="background-two"
+      ></div>
+      <div
+        [style.background]="this.bannerColorService.bannerColors.colorThree"
+        class="background-three"
+      ></div>
+    </div>
+    <ion-card-header class="ion-text-center">
+      <ion-avatar class="ion-margin-auto">
+        <ion-img src="../../../../assets/avatar_me.jpg"></ion-img>
+      </ion-avatar>
+
+      <ion-card-title *ngIf="user" class="ion-text-left">
+        {{ user.firstName }} {{ user.lastName }}</ion-card-title
+      >
+      <ion-card-subtitle class="ion-text-left"
+        >Графический дизайнер</ion-card-subtitle
+      >
+    </ion-card-header>
+
+    <ion-card-content>
+      <ng-container
+        *ngIf="
+          ['not-sent', 'pending', 'waiting-for-current-user-response'].includes(
+            friendRequestStatus
+          )
+        "
+      >
+        <ion-button
+          color="danger"
+          (click)="addUser()"
+          [disabled]="
+            ['pending', 'waiting-for-current-user-response'].includes(
+              friendRequestStatus
+            )
+          "
+          shape="round"
+          style="margin-right: 10px;"
+          >{{
+            friendRequestStatus === "waiting-for-current-user-response"
+              ? "Принять запрос"
+              : "Подключить"
+          }}</ion-button
+        >
+      </ng-container>
+      <ion-button fill="outline" color="danger" shape="round" class="mess" style="margin-right: 10px;">
+        <ion-icon slot="start" name="lock-closed" class="mess"></ion-icon>
+        Написать сообщение
+      </ion-button>
+      <ion-button fill="outline" shape="round" color="danger" class="more">Ещё</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

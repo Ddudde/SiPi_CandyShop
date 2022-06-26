@@ -1,0 +1,7 @@
+{
+  "name": "Perfection-chat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

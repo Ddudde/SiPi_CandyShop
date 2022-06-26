@@ -1,0 +1,36 @@
+.heading {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  icon-button {
+    padding: 0;
+  }
+}
+
+ion-grid ion-button {
+  --border-width: 1px;
+  height: 35px;
+  width: 100px;
+  .view-status {
+    margin: 0 6px;
+    font-style: italic;
+  }
+  .ion-margin {
+    margin-top: 0px;
+  }
+}
+
+.action-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-icon {
+  margin: auto;
+}
+
+.ion-margin {
+    width: 110px;
+}

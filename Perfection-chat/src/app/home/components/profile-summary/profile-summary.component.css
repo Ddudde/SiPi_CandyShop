@@ -1,0 +1,70 @@
+.item-divider {
+  border-bottom: 1px solid var(--ion-color-medium-tint);
+}
+
+ion-card {
+  width: 230px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #a34f8ec4;
+  margin-left: 0px;
+}
+
+ion-card ion-card-subtitle {
+  font-weight: 600;
+}
+
+.backdrop {
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.backdrop .background-one {
+  width: 200px;
+  height: 100%;
+}
+
+.backdrop .halp-ellipse {
+  border-radius: 0 100% 100% 0 / 50%;
+  width: 5px;
+  height: 100%;
+}
+
+.backdrop .background-two {
+  width: 40px;
+  height: 100%;
+}
+
+.backdrop .background-three {
+  width: 30px;
+  height: 100%;
+}
+
+ion-card-header {
+  margin-top: -54px;
+}
+
+ion-card-header ion-avatar {
+  width: 72px;
+  height: 72px;
+  margin: auto;
+  border: 2px solid #ffffff;
+  -webkit-box-shadow: inset 0px 0px 0px 10px var(--ion-color-tertiary-contrast);
+          box-shadow: inset 0px 0px 0px 10px var(--ion-color-tertiary-contrast);
+}
+
+ion-card-content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.connections {
+  margin-top: 8px;
+}
+/*# sourceMappingURL=profile-summary.component.css.map */

@@ -1,0 +1,33 @@
+<ion-card>
+  <ion-card-header>
+    <ion-avatar>
+      <ion-img src="../../../../assets/avatar_me.jpg"></ion-img>
+    </ion-avatar>
+    <ion-button
+      (click)="presentModal()"
+      shape="round"
+      fill="outline"
+      color="medium"
+    >
+      <span class="ion-text-left">Начать публикацию</span>
+    </ion-button>
+  </ion-card-header>
+  <ion-card-content class="ion-hide-sm-down">
+    <ion-button color="danger" fill="clear">
+      <ion-icon name="image-outline" class="photo"></ion-icon>
+      <ion-text>Фото</ion-text>
+    </ion-button>
+    <ion-button color="danger" fill="clear">
+      <ion-icon color="success" name="play-sharp"></ion-icon>
+      <ion-text>Видео</ion-text>
+    </ion-button>
+    <ion-button fill="clear" color="danger">
+      <ion-icon color="warning" name="calendar-outline"></ion-icon>
+      <ion-text>Событие</ion-text>
+    </ion-button>
+    <ion-button fill="clear" color="danger">
+      <ion-icon color="danger" name="newspaper-outline"></ion-icon>
+      <ion-text>Написать статью</ion-text>
+    </ion-button>
+  </ion-card-content>
+</ion-card>

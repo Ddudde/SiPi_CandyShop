@@ -1,0 +1,36 @@
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar>
+      <ion-tab-button>
+        <ion-icon name="home"></ion-icon>
+        <div>Главная</div>
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="people"></ion-icon>
+        <div>Коллеги</div>
+      </ion-tab-button>
+      <ion-tab-button (click)="presentModal()">
+        <ion-icon name="add-circle"></ion-icon>
+        <div>Пост</div>
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="chatbox-ellipses"></ion-icon>
+        <div>Сообщения</div>
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="notifications"></ion-icon>
+                  <ion-badge 
+                      color="danger"
+                      style="position: absolute;
+                      margin-left: -6px;
+                      margin-top: -10px;
+                      height: 16px;
+                      width: 16px;
+                      border-radius: 9999px">
+                      <ion-text style="font-weight: 400; font-size: 12px; margin-left: -1px">2</ion-text>
+                  </ion-badge>
+                  <div>Оповещения</div>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

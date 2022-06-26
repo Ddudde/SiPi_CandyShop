@@ -1,0 +1,38 @@
+<ion-card>
+  <ion-card-header>
+    <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col size="auto">
+        <ion-avatar>
+          <ion-img src="../../../../../assets/avatar_me.jpg"></ion-img>
+        </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <ion-card-title>{{ fullName }}</ion-card-title>
+        <ion-card-subtitle>Full-stack разработчик</ion-card-subtitle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button expand="block" size="small" fill="outline" color="rgba(243, 104, 162, 0.685)">Посмотреть профиль</ion-button>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-card-subtitle color="dark">Аккаунт</ion-card-subtitle>
+    <p class="ion-padding-top">Настройки & Приватность</p>
+    <p class="ion-padding-top">Помощь</p>
+    <p class="ion-padding-top">Язык</p>
+  </ion-card-content>
+
+  <div class="item-divider"></div>
+
+  <ion-card-content>
+    <ion-card-subtitle color="dark">Управление</ion-card-subtitle>
+    <p class="ion-padding-top">Посты & Активность</p>
+  </ion-card-content>
+
+  <div class="item-divider"></div>
+  
+  <ion-card-content>
+    <p class="sign-out" (click)="onSignOut()">Выход</p>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,17 @@
+.item-divider {
+    border-bottom: 1px solid var(--ion-color-medium-tint);
+}
+
+ion-card-content p:hover{
+    color: rgba(243, 104, 162, 0.979);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ion-card-subtitle{
+    font-weight: 600;
+}
+
+ion-button{
+    color: rgb(243, 104, 162);
+}

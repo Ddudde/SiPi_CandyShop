@@ -1,0 +1,51 @@
+<ion-card>
+  <div
+    [style.background]="this.bannerColorService.bannerColors.colorTwo"
+    class="backdrop"
+  >
+    <div
+      [style.background]="this.bannerColorService.bannerColors.colorOne"
+      class="background-one"
+    ></div>
+    <div
+      [style.background]="this.bannerColorService.bannerColors.colorOne"
+      class="half-ellipse"
+    ></div>
+    <div
+      [style.background]="this.bannerColorService.bannerColors.colorTwo"
+      class="background-two"
+    ></div>
+    <div
+      [style.background]="this.bannerColorService.bannerColors.colorThree"
+      class="background-three"
+    ></div>
+  </div>
+  <ion-card-header class="ion-text-center">
+    <!-- <input
+      #fileUpload
+      (change)="onFileSelect($event)"
+      style="display: none"
+      type="file"
+    /> -->
+    <ion-avatar class="ion-margin-auto"
+      ><ion-img src="../../../../assets/avatar_me.jpg"></ion-img
+    ></ion-avatar>
+
+    <ion-card-title class="ion-margin-top">{{ fullName }}</ion-card-title>
+    <ion-card-subtitle>Full-stack разработчик</ion-card-subtitle>
+  </ion-card-header>
+
+  <div class="item-divider"></div>
+
+  <ion-card-content>
+    <div>
+      <span>Написано статей</span>
+      <ion-text color="tertiary">12</ion-text>
+    </div>
+    <div class="connections">
+      <span>Подключений</span>
+      <ion-text color="tertiary">31</ion-text>
+    </div>
+    <ion-card-subtitle color="dark">Управление сетями</ion-card-subtitle>
+  </ion-card-content>
+</ion-card>
